@@ -1,0 +1,134 @@
+﻿<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/Images/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/Images/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/Images/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/Images/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/Images/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/Images/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/Images/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/Images/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/Images/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/Images/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/Images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/Images/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/Images/icon/favicon-16x16.png">
+    @*<link rel="manifest" href="~/Content/Images/icon/manifest.json">*@
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Content/Images/icon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Latest compiled and minified CSS -->
+    @*@Styles.Render("~/Bundles/SiteCss")
+    @Scripts.Render("~/Bundles/SiteScript")*@
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <div class="container">
+                <div class="top_social">
+                    <ul>
+                        <li><a href="https://twitter.com/VeriDocGlobal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://t.me/veridocglobal" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="javascript:void(0);">
+                    <img src="~/Content/Images/logo/logo.svg" alt="veridoccertificates" title="logo" width="300" height="65">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span> <i class="fa fa-bars" aria-hidden="true"></i></span>
+                </button>                
+            </div>
+        </nav>
+        <div class="solution_banner">
+            <img src="~/Content/Images/bg/header-bg.png" alt="VeriDocCertificates" title="header-bottom" class="img-fluid">
+        </div>
+    </header>
+    <div class="clearfix"></div>
+    <section id="document" class="document1" style="padding-top:10px">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <footer class="login-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row center-align">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="footer-logo"><img src="~/Content/Images/logo/logo-w.svg" alt="veridoccertificates" title="logo" width="300" height="65"></div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                        <div class="footer-social-follow">
+                            <div class="footer-follow-process">
+                                <img src="~/Content/Images/icon/FollowOurProgress.png" alt="img" class="img-fluid">
+                            </div>
+                            <div class="footer-social-icon">
+                                <a href="https://twitter.com/VeriDocGlobal" target="_blank"><i aria-hidden="true" class="fa fa-twitter"></i></a>
+                                <a href="https://t.me/veridocglobal" target="_blank"><i aria-hidden="true" class="fa fa-telegram"></i></a>
+                                <a href="https://www.facebook.com/VeriDocGlobal" target="_blank"><i class="fa fa-facebook-square social-font"></i></a>
+                                <a href="https://www.linkedin.com/company/veridocglobal" target="_blank"><i class="fa fa-linkedin social-font"></i></a>
+                                <a href="https://www.instagram.com/VeriDocGlobal/" target="_blank"><i class="fa fa-instagram social-font"></i></a>
+                                <a href="https://www.youtube.com/channel/UCbl5uvM3vd-XRm-aDj2YZJw" target="_blank"><i class="fa fa-youtube-play social-font"></i></a>
+                                <a href="https://www.pinterest.com.au/veridocglobal/" target="_blank"><i aria-hidden="true" class="fa fa-pinterest social-font"></i></a>
+                                <a href="https://medium.com/veridocglobal" target="_blank"><i aria-hidden="true" class="fa fa-medium"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="copyright">
+                            <p>© copyright | all rights reserved, VeriDoc Certificates</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="footer-mail"><span><em>Have a question?</em></span><a href="mailto:admin@veridoccertificates.com"><i class="fa fa-envelope-o"></i>admin@veridoccertificates.com</a></div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="footer-slogan-div"><img src="~/Content/Images/bg/new-slogan.png" alt="img"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="clearfix"></div>
+
+    <div class="note_modal">
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Lorem ipsum dolor sit amet</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label>Enter Note:</label>
+                        <textarea class="form-control" placeholder="Enter the note here."></textarea>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn_cancel" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn_submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

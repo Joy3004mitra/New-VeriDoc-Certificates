@@ -1,0 +1,243 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MvcGrid/_admin_layout.cshtml";
+}
+
+@section FormName{
+
+    <i class="icon-home2 mr-2"></i>Pricing
+
+}
+
+<script>
+    function ShowSuccess() {
+        swal({
+            title: "Data Update",
+            text: "Data Updated Sucessfully!",
+            icon: "success",
+            button: "Ok",
+        });
+    }
+
+    function ShowErrMsg() {
+        swal({
+            title: "Error",
+            text: "Error Occured!",
+            icon: "error",
+            button: "Ok",
+        });
+    }
+</script>
+
+<script>
+    function OpenTab1(strMsg, error) {
+        $("#tab1").fadeIn();
+       
+        $("#tab2").hide();
+
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+    function OpenTab2(strMsg, error) {
+
+        $("#tab1").hide();
+        $("#tab3").hide();
+        $("#tab2").fadeIn();
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+</script>
+
+<div class="content" style="min-height: 10px;">
+    <ul id="fbAdd" class="fab-menu fab-menu-fixed fab-menu-bottom-right">
+        <li>
+            @using (Html.BeginForm("Add", "Pricing", FormMethod.Post, new { id = "submitaddform" }))
+            {
+
+
+                <a id="A2" href="#" class="fab-menu-btn btn bg-green btn-float rounded-round btn-icon" onclick="btn_Add_Click();">
+                    <i class="fab-icon-open icon-plus3"></i><i class="fab-icon-close icon-cross2"></i>
+                </a>
+            }
+        </li>
+    </ul>
+    <div id="tab1" class="card">
+        <div class="card-body">
+            <table cellspacing="0" rules="all" class="table table-hover table-bordered table-striped" border="1" id="gvpricing" name="gvpricing" style="border-collapse:collapse;">
+                <tbody>
+                    <tr>
+                        <th>Pricing Name</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+
+
+                    @foreach (System.Data.DataRow dr in Model)
+                    {
+                        <tr>
+
+                            <td>@dr["PACKAGE_NAME"].ToString()</td>
+
+                            <td>
+                                @using (Html.BeginForm("edit", "Pricing", FormMethod.Post, new { id = "submitE+" + dr["DTLS_PACKAGE_KEY"].ToString() + "" }))
+                                {
+
+                                    <input type="hidden" name="editid" value="@dr["DTLS_PACKAGE_KEY"].ToString()" />
+
+                                    <a id="submitE+@dr["DTLS_PACKAGE_KEY"].ToString()" href="#" onclick="postmethodusingjs(this.id)" class="list-icons-item"><i class="icon-menu9"></i></a>
+
+                                }
+                            </td>
+
+                            <td>
+                                @using (Html.BeginForm("delete", "Pricing", FormMethod.Post, new { id = "submitD+" + dr["DTLS_PACKAGE_KEY"].ToString() + "" }))
+                                {
+
+                                    <input type="hidden" name="editid" value="@dr["DTLS_PACKAGE_KEY"].ToString()" />
+
+                                    <a id="submitD+@dr["DTLS_PACKAGE_KEY"].ToString()" href="#" onclick="postmethodusingjs(this.id)" class="list-icons-item"><i class="icon-trash"></i></a>
+
+                                }
+                            </td>
+
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul id="tabsmenu" class="tabsmenu" style="display: none">
+        <li class="active"><a id="atab1" href="#tab1">List</a></li>
+        <li><a id="atab2" href="#tab2">Add / Edit</a></li>
+        <li><a id="aPageName" href="#" style="margin: 0 5px 0 33%; border-radius: 6px;">&nbsp;</a></li>
+    </ul>
+    <div id="tab2" class="card" style="display: none">
+        @using (Html.BeginForm("btn_Head_Save_Click", "Pricing", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+
+            <div>
+                <input type="hidden" id="hf_DTLS_PACKAGE_KEY" name="hf_DTLS_PACKAGE_KEY" value="@ViewBag.hf_DTLS_PACKAGE_KEY" />
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <fieldset>
+                            <legend class="font-weight-semibold">Pricing</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Package Name
+                                        </label>
+                                        <input type="text" id="txt_PACKAGE_NAME" name="txt_PACKAGE_NAME" value="@ViewBag.txt_PACKAGE_NAME" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Package Price
+                                        </label>
+                                        <input type="text" id="txt_PACKAGE_AMOUNT" name="txt_PACKAGE_AMOUNT" value="@ViewBag.txt_PACKAGE_AMOUNT" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Package Description
+                                        </label>
+                                        <input type="text" id="txt_PACKAGE_DESC" name="txt_PACKAGE_DESC" value="@ViewBag.txt_PACKAGE_DESC" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Monthly Price Details
+                                        </label>
+                                        <input type="text" id="txt_MONTHLY_PACKAGE" name="txt_MONTHLY_PACKAGE" value="@ViewBag.txt_MONTHLY_PACKAGE" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+
+                            <input type="submit" value="Submit" id="btn_Head_Save" name="btn_Head_Save" class="mb-xs mt-xs btn btn-success" />
+                            <input type="button" value="Back" id="btn_Back_Save" name="btn_Back_Save" class="mb-xs mt-xs mr-xs btn btn-warning" onclick="location.href = 'Index';" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@if (ViewBag.JavaScriptFunction != null)
+{
+
+    <script type="text/javascript">
+                    @Html.Raw(ViewBag.JavaScriptFunction);
+    </script>
+}
+
+@if (TempData["JavaScriptFunction"] != null)
+{
+
+    <script type="text/javascript">
+                    @Html.Raw(TempData["JavaScriptFunction"]);
+    </script>
+}
+<script>
+
+
+    function postmethodusingjs(id) {
+        document.forms[id].submit();
+        return false;
+    }
+    function btn_Add_Click() {
+
+        //    alert('ok');
+        document.forms["submitaddform"].submit();
+        return false;
+    }
+
+</script>
+<script type="text/javascript">
+
+
+    function OpenTab3(strMsg, error) {
+        $("#tab1").hide();
+        $("#tab3").fadeIn();
+        $("#tab2").hide();
+
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('#loadingMask').fadeOut();
+
+        setDatatable("gvpricing");
+    });
+</script>

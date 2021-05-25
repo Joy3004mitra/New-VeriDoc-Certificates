@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VeriDoc Certificates</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/ico" href="~/Content/Images/veridoc-favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="144x144" href="~/Content/Images/veridoc-favicon/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/Images/veridoc-favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="~/Content/Images/veridoc-favicon/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="36x36" href="~/Content/Images/veridoc-favicon/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="~/Content/Images/veridoc-favicon/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/Images/veridoc-favicon/android-icon-96x96.png">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/Images/veridoc-favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/Images/veridoc-favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/Images/veridoc-favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/Images/veridoc-favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/Images/veridoc-favicon/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/Images/veridoc-favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/Images/veridoc-favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/Images/veridoc-favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/Images/veridoc-favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" href="~/Content/Images/veridoc-favicon/apple-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="~/Content/Images/veridoc-favicon/apple-icon.png">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/Images/veridoc-favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/Images/veridoc-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/Images/veridoc-favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="~/Content/Images/veridoc-favicon/ms-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="150x150" href="~/Content/Images/veridoc-favicon/ms-icon-150x150.png">
+    <link rel="icon" type="image/png" sizes="310x310" href="~/Content/Images/veridoc-favicon/ms-icon-310x310.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="~/Content/Images/veridoc-favicon/ms-icon-70x70.png">
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    @*@Styles.Render("~/Content/css/bootstrap.min.css")
+        @Styles.Render("~/Content/css/pay-font-awesome.min.css")
+        @Styles.Render("~/Content/css/mysqpaymentform.css")*@
+
+
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/mysqpaymentform.css">
+    <link rel="stylesheet" href="~/Content/css/pay-font-awesome.min.css" />"
+
+
+</head>
+<body class="home-1">
+    <div class="main-area">
+        <div class="pay-link-header">
+            VERIDOC GLOBAL PTY LTD
+        </div>
+
+        <div class="pay-page">
+            <div class="right-col">
+                <section class="pay-page-content col-card">
+                    <div class="card-header">
+                        <div class="pay-page-info">
+                            <div class="animatedcheck">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                    <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                                    <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                                </svg>
+                            </div>
+                            <h3 class="soc-product-title">Payment Successful !</h3>
+                            <h3 class="soc-product-price">
+                                <span class="price">@ViewBag.PlanName package : AU$@ViewBag.PlanPriceAU </span><span class="cadence">/ month</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="form-section mt-3 successform-section">
+                        <hr class="form-footer-divider" style="margin-top: 24px; margin-bottom: 24px;">
+
+                        <p class="pay-link-description description successparagraph">Thank you for your payment. We have begun setting up your administrator account. We will send you an email confirmation as soon as your account is ready to create new certificates.</p>
+
+                        <div class="form-button pay-button">
+                            <a href="~/"><i class="material-icons">home</i> &nbsp; Back to Home</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- End main area -->
+
+    <footer class="squarefooter">
+        <svg class="sqlogo" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.8C0 4.0568 0 3.68519 0.0492466 3.37426C0.320333 1.66269 1.66269 0.320333 3.37426 0.0492466C3.68519 0 4.0568 0 4.8 0H19.2C19.9432 0 20.3148 0 20.6257 0.0492466C22.3373 0.320333 23.6797 1.66269 23.9508 3.37426C24 3.68519 24 4.0568 24 4.8V19.2C24 19.9432 24 20.3148 23.9508 20.6257C23.6797 22.3373 22.3373 23.6797 20.6257 23.9508C20.3148 24 19.9432 24 19.2 24H4.8C4.0568 24 3.68519 24 3.37426 23.9508C1.66269 23.6797 0.320333 22.3373 0.0492466 20.6257C0 20.3148 0 19.9432 0 19.2V4.8ZM4.8 5.93684C4.8 5.30898 5.30898 4.8 5.93684 4.8H18.0632C18.691 4.8 19.2 5.30898 19.2 5.93684V18.0632C19.2 18.691 18.691 19.2 18.0632 19.2H5.93684C5.30898 19.2 4.8 18.691 4.8 18.0632V5.93684ZM9.03115 9.43972C9 9.53557 9 9.65402 9 9.89091V14.1091C9 14.346 9 14.4644 9.03115 14.5603C9.09409 14.754 9.24598 14.9059 9.43972 14.9689C9.53557 15 9.65402 15 9.89091 15H14.1091C14.346 15 14.4644 15 14.5603 14.9689C14.754 14.9059 14.9059 14.754 14.9689 14.5603C15 14.4644 15 14.346 15 14.1091V9.89091C15 9.65402 15 9.53557 14.9689 9.43972C14.9059 9.24598 14.754 9.09409 14.5603 9.03115C14.4644 9 14.346 9 14.1091 9H9.89091C9.65402 9 9.53557 9 9.43972 9.03115C9.24598 9.09409 9.09409 9.24598 9.03115 9.43972Z"></path>
+        </svg>
+        <!-- eslint-enable max-len -->
+        <p>
+            Secure checkout powered by Square
+        </p>
+    </footer>
+
+    <script src="~/Content/js/jquery-2.2.4.min.js"></script>
+    <script src="~/Content/js/vendor/bootstrap.min.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+
+
+    @*@Scripts.Render("~/Content/js/jquery-2.2.4.min.js")
+    @Scripts.Render("~/Content/js/vendor/bootstrap.min.js")
+    @Scripts.Render("~/Content/js/popper.min.js")*@
+
+</body>
+</html>

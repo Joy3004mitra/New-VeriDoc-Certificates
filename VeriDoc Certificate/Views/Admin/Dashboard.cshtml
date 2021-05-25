@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/MvcGrid/_admin_layout.cshtml";
+}
+
+@section FormName{
+
+    <i class="icon-home2 mr-2"></i>Dashboard
+
+}
+
+
+
+<script>
+    $(document).ready(function () {
+        $('.form-input-styled').uniform({
+            fileButtonClass: 'action btn bg-pink-400'
+        });
+        $('#loadingMask').fadeOut();
+    });
+</script>

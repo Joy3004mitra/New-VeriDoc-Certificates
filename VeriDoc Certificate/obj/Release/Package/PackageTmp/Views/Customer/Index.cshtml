@@ -1,0 +1,718 @@
+﻿@using System.Web.Optimization
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="Use VeriDoc Certificates backed by blockchain technology and reduce the risk of scams and fraud by verifying the certificates in seconds.">
+    <meta name="keywords" content="Certificate Verification with Blockchain Technology">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href="https://veridoccertificates.com/">
+    <title>Secure your Certificate Verification with Blockchain Technology</title>
+    <link rel="shortcut icon" type="image/ico" href="~/Content/Images/veridoc-favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="144x144" href="~/Content/Images/veridoc-favicon/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/Images/veridoc-favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="~/Content/Images/veridoc-favicon/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="36x36" href="~/Content/Images/veridoc-favicon/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="~/Content/Images/veridoc-favicon/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/Images/veridoc-favicon/android-icon-96x96.png">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/Images/veridoc-favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/Images/veridoc-favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/Images/veridoc-favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/Images/veridoc-favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/Images/veridoc-favicon/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/Images/veridoc-favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/Images/veridoc-favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/Images/veridoc-favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/Images/veridoc-favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" href="~/Content/Images/veridoc-favicon/apple-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="~/Content/Images/veridoc-favicon/apple-icon.png">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/Images/veridoc-favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/Images/veridoc-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/Images/veridoc-favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="~/Content/Images/veridoc-favicon/ms-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="150x150" href="~/Content/Images/veridoc-favicon/ms-icon-150x150.png">
+    <link rel="icon" type="image/png" sizes="310x310" href="~/Content/Images/veridoc-favicon/ms-icon-310x310.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="~/Content/Images/veridoc-favicon/ms-icon-70x70.png">
+
+    <link rel="manifest" href="~/Content/Images/favicon/manifest.json">
+    <!--Style Rules-->
+    <link rel="stylesheet" href="~/Content/css/normalize.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/css/theme.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/style1.css">
+    <script src="~/Content/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194788402-1"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>function popup(){
+          $('#myModal').css("display", "block")
+        }
+
+        function error() {
+            swal({
+                title: "Error!!",
+                text: "something happened wrong!",
+                icon: "error",
+                button: "Ok",
+            });
+        }</script>
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-194788402-1');</script>
+    <meta name="google-site-verification" content="33ILWb6Re7OVS-boOBWvwKeUKb_qifRvgqF8F-CoiqE" />
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org/",
+        "@@type": "WebSite",
+        "name": "VeriDoc Certificates",
+        "url": "https://veridoccertificates.com/",
+        "potentialAction": {
+        "@@type": "SearchAction",
+        "target": "https://veridoccertificates.com/{search_term_string}https://veridoccertificates.com/",
+        "query-input": "required name=search_term_string"
+        }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
+        "name": "VeriDoc Ccertificates",
+        "url": "https://veridoccertificates.com/",
+        "logo": "https://veridoccertificates.com/documents/homepage/20210414_021804-B.svg"
+        }
+    </script>
+
+    <style>
+        .modal-backdrop {
+            opacity: 0.5 !important;
+        }
+
+        #go_top {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+            #go_top.show {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".mainmenu-area">
+
+    <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+        <div class="header_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12">
+                        @*<ul id="div_phn_mail"><li><a href="tel: 1800 083 743"><i class="fa fa-mobile" aria-hidden="true"> </i>1800 083 743</a></li><li><a href="mailto: admin@veridocglobal.com" class="border_none"><i class="fa fa-envelope" aria-hidden="true"></i> admin@veridocglobal.com</a></li></ul>*@
+                        <ul id="div_phn_mail">
+                            <li>
+                                <a href="tel: @ViewBag.txt_CONTACT_NO">
+                                    @*<i class="fa fa-mobile" aria-hidden="true"> </i>*@
+                                    <svg width="12" class="svg-inline--fa fa-mobile fa-w-10" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                                        <path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path>
+                                    </svg>
+                                    @ViewBag.txt_CONTACT_NO
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto: @ViewBag.txt_MAIL" class="border_none">
+                                    @*<i class="fa fa-envelope" aria-hidden="true"></i>*@
+                                    <svg width="16" class="svg-inline--fa fa-envelope fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                                    </svg>
+                                    @ViewBag.txt_MAIL
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-12 text-right hidden_xs">
+                        <ul id="div_add"><li class="border_none"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>@ViewBag.txt_FULL_ADDRESS</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container position-relative main_menu">
+            <a href="#home-page" id="logo_list" class="navbar-brand">
+                <img class="navbar-brand-regular" src="@ViewBag.img_Logo" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="244" height="50">
+                <img class="navbar-brand-sticky" src="@ViewBag.img_Logo" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="244" height="50">
+            </a>
+            <button id="btnMenu" class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="login_img1">
+                <a class="" href="https://my.veridoccertificates.com" target="_blank">
+                    <img src="~/Content/Images/nav-login-user-hover.png" alt="Veridoc Global Certificates" class="img-fluid" title="Veridoc Global Certificates" width="30" height="30">
+                </a>
+            </div>
+            <div class="navbar-inner">
+                <!--  Mobile Menu Toggler -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home-page">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured">
+                                Benefits
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#logblook_business">Use Cases</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item login_desktop">
+                            <a class="nav-link login_img" href="https://my.veridoccertificates.com" target="_blank">
+                                <img src="~/Content/Images/nav-login-user-hover.png" alt="Veridoc Global Certificates" class="img-fluid" title="Veridoc Global Certificates" width="30" height="30">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--header-start-->
+    <section class="header-area text-white xs-center v4" id="home-page">
+        <div class="table-cell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="left-content ">
+                            <div class="content banner-content wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                                <h1 id="heading1" class="text-white wow zoomIn" title="MAKING VERIFICATION SIMPLE FOR EVERYONE" style="visibility: visible; animation-name: zoomIn;">@ViewBag.txt_BANNER_HEADING_1</h1>
+
+                                <p id="heading2" class="text-white wow zoomIn mb-4" style="visibility: visible; animation-name: zoomIn;">
+                                    @ViewBag.txt_BANNER_HEADING_2
+                                </p>
+                                <p id="heading3" class="text-white wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                                    @ViewBag.txt_BANNER_HEADING_3
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div id="banner_img" class="right-mob text-center"><img class="img-fluid img" src="@ViewBag.img_banner" alt="Veridoc Global Certificates" title="Veridoc Global Certificates"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--quick section-->
+
+    <section id="quick" class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div id="benefits_img" class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 text-center"><img src="@ViewBag.img_TECHNOLOGY" alt="veridocklockbook" width="250" height="461" title="quick-use" class="img-fluid"></div>
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="content">
+                        <div class="section-heading">
+                            <h2 id="quickfact_heading" class="text-capitalize">PATENTED VERIFICATION TECHNOLOGY</h2>
+                        </div>
+                        <div id="quickfacts_list" class="row">
+                            @Html.Raw(ViewBag.txt_TECHNOLOGY_DESC)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Feature-->
+    <section id="featured">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="text-capitalize" title="FEATURES AND BENEFITS OF
+                    VERIDOC CERTIFICATE">
+                    FEATURES AND BENEFITS OF<br>
+                    VERIDOC CERTIFICATES
+                </h2>
+            </div>
+            <div id="benefit_desc" class="row mt-5">
+                @Html.Raw(ViewBag.Benefits)
+            </div>
+        </div>
+    </section>
+    <!--use cases-->
+
+    <section id="logblook_business">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2 class="text-capitalize mb-5" title="USE CASES">USE CASES</h2>
+            </div>
+            <div id="usecase_desc" class="row">
+                @Html.Raw(ViewBag.UseCase)
+            </div>
+        </div>
+    </section>
+    <!--pricing start-->
+
+    <section id="pricing" class="section price-plan-area overflow-hidden ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2 title="OUR PRICING">OUR PRICING</h2>
+                        <p>
+                            The pricing below is shown on a per month basis. For organisations that issue
+                            certificates once or twice a year and would like to discuss annual pricing or a prepaid
+                            option, please get in touch by scheduling a call with our team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="row price-plan-wrapper">
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-6">
+                            <!-- Single Price Plan -->
+                            <div id="free_trial_desc" class="single-price-plan text-center">
+                                <div class="plan-thumb"><img class="avatar-lg" src="~/Content/Images/favicon.png" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="80" height="94"></div><div class="plan-title my-2 my-sm-3"><h4 class="text-uppercase" title="BASIC">@ViewBag.PACKAGE_NAME_ONE</h4></div><div class="plan-price"><h2 class="fw-7" title="$10USD"><sup>$</sup>@ViewBag.PACKAGE_AMOUNT_ONE<sub>USD</sub></h2></div><div class="plan-description"><ul class="plan-features1"><b><li class="border-bottom py-3">@ViewBag.MONTHLY_PACKAGE_ONE</li></b></ul></div><div class="plan-description">
+                                    <ul class="plan-features">
+                                        <li class="py-3 fonttt">
+                                            @ViewBag.PACKAGE_DESC_ONE
+                                        </li>
+                                    </ul><div class="plan-button">
+                                        @*@Html.ActionLink(
+                                            linkText: "Buy Now ",
+                                            actionName: "Plan",
+                                            controllerName: "Subscribe",
+                                            routeValues: new
+                                            {
+                                                id = 1
+                                            },
+                                            new { @class = "btn" }
+                                            )*@
+
+                                        <a href='~/Subscribe/Plan/@ViewBag.BuyNowLinkONE' class="btn">Buy Now</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-6">
+                            <!-- Single Price Plan -->
+                            <div id="standard_desc" class="single-price-plan text-center">
+                                <div class="plan-thumb"><img class="avatar-lg" src="~/Content/Images/favicon.png" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="80" height="94"></div><div class="plan-title my-2 my-sm-3"><h4 class="text-uppercase" title="STANDARD">@ViewBag.PACKAGE_NAME_TWO</h4></div><div class="plan-price"><h2 class="fw-7" title="$50USD"><sup>$</sup>@ViewBag.PACKAGE_AMOUNT_TWO<sub>USD</sub></h2></div><div class="plan-description"><ul class="plan-features1"><b><li class="border-bottom py-3">@ViewBag.MONTHLY_PACKAGE_TWO</li></b></ul></div><div class="plan-description">
+                                    <ul class="plan-features">
+                                        <li class="py-3 fonttt">
+                                            @ViewBag.PACKAGE_DESC_TWO
+                                        </li>
+                                    </ul><div class="plan-button">
+                                        <a href='~/Subscribe/Plan/@ViewBag.BuyNowLinkTWO' class="btn">Buy Now</a>
+                                        @*@Html.ActionLink(
+                                            linkText: "Buy Now",
+                                            actionName: "Plan",
+                                            controllerName: "Subscribe",
+                                            routeValues: new
+                                            {
+                                                id = 2
+                                            },
+                                            new { @class = "btn" }
+                                            )*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-6 mt-4 mt-md-0">
+                            <!-- Single Price Plan -->
+                            <div id="pro_desc" class="single-price-plan text-center">
+                                <div class="plan-thumb"><img class="avatar-lg" src="~/Content/Images/favicon.png" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="80" height="94"></div><div class="plan-title my-2 my-sm-3"><h4 class="text-uppercase" title="PRO">@ViewBag.PACKAGE_NAME_THREE</h4></div><div class="plan-price"><h2 class="fw-7" title="$200USD"><sup>$</sup>@ViewBag.PACKAGE_AMOUNT_THREE<sub>USD</sub></h2></div><div class="plan-description"><ul class="plan-features1"><b><li class="border-bottom py-3">@ViewBag.MONTHLY_PACKAGE_THREE</li></b></ul></div><div class="plan-description">
+                                    <ul class="plan-features">
+                                        <li class="py-3 fonttt">
+                                            @ViewBag.PACKAGE_DESC_THREE
+                                        </li>
+                                    </ul><div class="plan-button">
+                                        <a href='~/Subscribe/Plan/@ViewBag.BuyNowLinkTHREE' class="btn">Buy Now</a>
+                                        @*@Html.ActionLink(
+                                            linkText: "Buy Now",
+                                             actionName: "Plan",
+                                            controllerName: "Subscribe",
+                                            routeValues: new
+                                            {
+                                                id = 3
+                                            },
+                                            new { @class = "btn" }
+                                            )*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-sm-6 mt-4 mt-md-0">
+                            <!-- Single Price Plan -->
+                            <div class="single-price-plan text-center">
+                                <!-- Plan Thumb -->
+                                <div class="plan-thumb">
+                                    <img class="avatar-lg" src="~/Content/Images/favicon.png" alt="Veridoc Global Certificates" title="Veridoc Global Certificates" width="80" height="80">
+                                </div>
+                                <!-- Plan Title -->
+                                <div class="plan-title my-2 my-sm-3">
+                                    <h4 class="text-uppercase" title="Advanced">Advanced</h4>
+                                </div>
+                                <!-- Plan Price -->
+                                @*<div class="plan-price">
+                                        <h2 class="fw-7" title=""><small class="fw-6"></small></h2>
+                                    </div>*@
+                                <div class="plan-description text-center">
+                                    <ul class="plan-features1  planfeature-new">
+                                        <li class="border-bottom pb-2" style="color: #57ab4b;">
+                                            Contact us<br>
+                                            for more info at:
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="plan-description">
+                                    <ul class="plan-features">
+                                        <li id="email_div" class=" py-3 fonttt"><a href="mailto: admin@veridocglobal.com">admin@veridocglobal.com</a></li>
+                                    </ul>
+                                    <div class="plan-button">
+                                        <a class="btn nav-link" href="#contact">Schedule a Call</a>
+                                        @*<a href="#contact" class="btn" data-toggle="modal" data-target="#myModal2">Schedule a Call</a>*@
+                                    </div>
+                                </div>
+                                <!-- Plan Button -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" text-center text-white">
+                        <p>*The pricing above does not include a one-time certificate template set up fee. Please contact us to discuss your certificate template requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--pricing end-->
+    <!--protect certificate-->
+    <section class="protect-certificate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>
+                        PROTECT YOUR CERTIFICATES TODAY
+                        WITH VERIDOC CERTIFICATES
+                    </h4>
+                    <p>
+                        VeriDoc Certificates uses cutting-edge verification technology that is patented in over
+                        90 countries worldwide. We’re confident you won’t find a better blockchain solution
+                        elsewhere. Contact us to get started today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--get in touch-->
+    <!--====== Contact Area Start ======-->
+    <section id="contact" class="contact-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2 class="text-uppercase">get in touch</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-5">
+                    <!-- Contact Us -->
+                    <div class="contact-us">
+                        <ul>
+                            <li class="py-3">
+                                <a class="media" href="#">
+                                    <div class="social-icon mr-3">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <span class="media-body align-self-center text-white  addredd-area-forml">
+                                        <strong>Our Office</strong><br>
+                                        @ViewBag.txt_FULL_ADDRESS
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="py-3">
+                                <a class="media" href="tel:1800 083 743">
+                                    <div class="social-icon mr-3">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <span class="media-body align-self-center text-white">
+                                        <strong>Let’s Talk</strong><br>
+                                        1800 083 743
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="py-3">
+                                <a class="media" href="mailto:admin@veridocglobal.com">
+                                    <div class="social-icon mr-3">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <span class="media-body align-self-center text-white">
+                                        <strong>General Enquiries</strong><br>
+                                        admin@veridocglobal.com
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 pt-4 pt-md-0">
+                    <!-- Contact Box -->
+                    <div class="contact-box text-center">
+                        <!-- Contact Form -->
+                        @using (Html.BeginForm("btn_Contact_click", "Customer", FormMethod.Post))
+                        {
+            <div id="contact_form" class="row">
+                <div class="col-12">
+                    <div class="form-group">
+
+                        <input name="txt_Name" type="text" id="txt_Name" class="form-control" placeholder="Enter your name *" required="required" />
+                    </div>
+                    <div class="form-group">
+
+                        <input name="txt_Email" type="email" id="txt_Email" class="form-control" placeholder="Enter your e-mail *" required="required" />
+                    </div>
+
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <textarea name="txtMessage" id="txtMessage" class="form-control" maxlength="800" placeholder="Type your message *" required="required"></textarea>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button id="btn_Contact" type="submit" class="btn btn-lg btn-block mt-3"><span></span>Send Message</button>
+
+
+                </div>
+            </div>}
+                        <p class="form-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--get in touch end-->
+    <!--footer start-->
+
+    <footer class="p-50">
+        <section id="footer" class="footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-12 col-lg-4 mb-md-4">
+                        <div id="footer_logo"> <img class="footer-logo" src="@ViewBag.img_Logo" alt="Veridoc Global Certificates" title="Veridoc Global Certificates"></div>
+
+                        <ul id="social_links" class="social-links"><li><a href="@ViewBag.txt_FACEBOOK_LINK" target="_blank"><i class="fa fa-facebook-f"></i></a></li><li><a href="@ViewBag.txt_TWITTER_LINK" target="_blank"><i class="fa fa-twitter"></i></a></li><li><a href="@ViewBag.txt_INSTAGRAM_LINK" target="_blank"><i class="fa fa-instagram"></i></a></li><li><a href="@ViewBag.txt_TELEGRAM_LINK" target="_blank"><i class="fa fa-paper-plane"></i></a></li><li><a href="@ViewBag.txt_LINKEDIN_LINK" target="_blank"><i class="fa fa-linkedin"></i></a></li><li><a href="@ViewBag.txt_PRINTEREST_LINK" target="_blank"><i class="fa fa-pinterest"></i></a></li><li><a href="@ViewBag.txt_MEDIUM_LINK" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a></li></ul>
+                        <br>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pl-lg-5 ">
+                        <h5 title="Usefull links">Useful links</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li class="mb-3"><a href="~/Customer/#featured">Benefits</a></li>
+                            <li class="mb-3"><a href="~/Customer/#logblook_business">Use Cases</a></li>
+                            <li class="mb-3"><a href="~/Customer/#pricing">Pricing</a></li>
+                            <li class="mb-3"><a href="~/Customer/#contact">Contact</a></li>
+                            <li class="mb-3"><a href="/Sitemap/">Sitemap</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 pl-lg-5">
+                        <h5 title="Contact Info">Contact Info</h5>
+                        <div class="media ">
+                            <div class="social-icon mr-lg-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+
+                            <p id="address_div">@ViewBag.txt_FULL_ADDRESS</p>
+                        </div>
+                        <br>
+                        <div class="media">
+                            <div class="social-icon mr-lg-3">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+
+                            <p id="phone_div"><a href="tel: @ViewBag.txt_CONTACT_NO">@ViewBag.txt_CONTACT_NO</a></p>
+                        </div>
+                        <div class="media">
+                            <div class="social-icon mr-lg-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p id="mail_div"><a href="mailto: @ViewBag.txt_MAIL">@ViewBag.txt_MAIL</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+    </footer>
+
+    <!--modal enq-->
+    <div class="note_modal">
+        <div class="modal show" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="close modalclose">×</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="mail-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <p>Your enquiry has been sent successfully.</p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn_cancel modalclose">Okay</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--contact form modal-->
+    <div class="note_modal">
+        <div class="modal show" id="myModal2" aria-modal="true" style="display: none;">
+
+            <div class="modal-dialog enq-dialog">
+                @using (Html.BeginForm("btn_Submit_click", "Customer", FormMethod.Post))
+                {
+    <div class="modal-content contact-box">
+        <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close">×</button>
+            <h4 class="modal-title text-left">Contact Us</h4>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="txt_name1" name="txt_name1" class="form-control mb-4" placeholder="Name">
+            <input type="text" id="txtmail" name="txtmail" class="form-control mb-4" placeholder="Email">
+            @*<input type="text" style="height:100px" id="txt_msg" name="txt_msg" class="form-control mb-4" placeholder="Write your message....">*@
+            <textarea class="form-control mb-4" placeholder="Write your message...." id="txt_msg" name="txt_msg"></textarea>
+        </div>
+        <div class="modal-footer text-center">
+            @*<button type="submit" id="btn_Contact" formaction="btn_Submit_click" formmethod="post" class="btn_cancel">Send Message</button>*@
+            <button id="btn_Submit" type="submit" class="btn_cancel"><span></span>Send Message</button>
+        </div>
+    </div>}
+            </div>
+
+        </div>
+    </div>
+    <!--footer end-->
+    <a id="go_top" href="#top" style="position: fixed; z-index: 2147483647;"><i class="fa fa-angle-up"></i></a>
+
+    <script src="~/Content/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/Content/js/vendor/bootstrap.min.js"></script>
+    <script src="~/Content/js/ajaxchimp.js"></script>
+    <script src="~/Content/js/contact-form.js"></script>
+    <script src="~/Content/js/wow.min.js"></script>
+    <script src="~/Content/js/main.js"></script>
+
+    @if (TempData["JavaScriptFunction"] != null)
+    {
+
+<script type="text/javascript">
+                    @Html.Raw(TempData["JavaScriptFunction"]);
+</script>}
+
+
+    <script type="text/javascript">$('#btn_Submit').on('click', function () {
+
+            $('#myModal').css("display", "block")
+        });
+        $('.modalclose').on('click', function () {
+
+            $('#myModal').css("display", "none")
+        });</script>
+
+    <script>(function ($) {
+            'use strict';
+
+            jQuery(document).on('ready', function () {
+
+                $('a.page-scroll').on('click', function (e) {
+                    var anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $(anchor.attr('href')).offset().top - 50
+                    }, 1500);
+                    e.preventDefault();
+                });
+
+            });
+
+
+        });</script>
+
+    <script>$(document).ready(function () {
+
+            if ($(window).width() < 992) {
+                $("#navbar-nav").append('<li class="nav-item"><a class="nav-link" href="https://my.veridoccertificates.com/">Login</a></li>');
+            }
+
+            $('.navbar-nav a').on('click', function (event) {
+                $("#btnMenu").click();
+                var target = jQuery(this);
+                var element = target.attr('href');
+
+
+                jQuery('.navbar-nav a').removeClass('active')
+                target.addClass('active');
+
+                jQuery("body, html").animate({
+                    scrollTop: jQuery(element).offset().top - 120
+                }, 400);
+                return false;
+
+            });
+        });</script>
+    <script>var btn = $('#go_top');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });</script>
+
+</body>
+</html>

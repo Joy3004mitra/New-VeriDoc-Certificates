@@ -1,0 +1,6 @@
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\bin\Debug\MyApp.Entity.dll
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\bin\Debug\MyApp.Entity.pdb
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\obj\Debug\MyApp.Entity.csprojAssemblyReference.cache
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\obj\Debug\MyApp.Entity.csproj.CoreCompileInputs.cache
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\obj\Debug\MyApp.Entity.dll
+F:\yourflow\Veridoc Certificate\Veridoc certificate latest\VeriDoc Certificate\MyApp.Entity\obj\Debug\MyApp.Entity.pdb

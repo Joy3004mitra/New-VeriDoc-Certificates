@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MvcGrid/_admin_layout.cshtml";
+}
+
+@section FormName{
+
+    <i class="icon-home2 mr-2"></i>View Client Register List
+
+}
+<style type="text/css">
+    .filename {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .preview {
+        height: 230px;
+    }
+</style>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function ShowSuccess() {
+        swal({
+            title: "Data Update",
+            text: "Data Updated Sucessfully!",
+            icon: "success",
+            button: "Ok",
+        });
+    }
+
+    function ShowErrMsg() {
+        swal({
+            title: "Error",
+            text: "Error Occured!",
+            icon: "error",
+            button: "Ok",
+        });
+    }
+</script>
+<div class="card">
+    <div class="card-body">
+        <div class="col-md-12">
+            <fieldset>
+                <legend class="font-weight-semibold">View Client</legend>
+                <div class="row">
+                    <div class="col-md-12">
+                        <fieldset>
+                            <legend>View Client</legend>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table cellspacing="0" rules="all" class="table table-hover table-bordered table-striped" border="1" id="gvpricing" name="gvpricing" style="border-collapse:collapse;">
+                                            <tbody>
+                                                <tr>
+                                                    <th>FirstName</th>
+                                                    <th>LastName</th>
+                                                    <th>Email</th>
+                                                    <th>Contact No</th>
+                                                    <th>Company Name</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                                @foreach (System.Data.DataRow dr in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@dr["FIRSTNAME"].ToString()</td>
+                                                        <td>@dr["LASTNAME"].ToString()</td>
+                                                        <td>@dr["EMAIL"].ToString()</td>
+                                                        <td>@dr["PHONE"].ToString()</td>
+                                                        <td>@dr["COMPANY_NAME"].ToString()</td>
+                                                        <td>
+                                                            @using (Html.BeginForm("delete", "Register", FormMethod.Post, new { id = "submitD+" + dr["DTLS_REGISTER_KEY"].ToString() + "" }))
+                                                            {
+
+                                                                <input type="hidden" name="editid" value="@dr["DTLS_REGISTER_KEY"].ToString()" />
+
+                                                                <a id="submitD+@dr["DTLS_REGISTER_KEY"].ToString()" href="#" onclick="postmethodusingjs(this.id)" class="list-icons-item"><i class="icon-trash"></i></a>
+
+                                                            }
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<script>
+    function postmethodusingjs(id) {
+        document.forms[id].submit();
+        return false;
+    }
+</script>
+
+<script type="text/javascript">
+
+    function OpenTab1(strMsg, error) {
+        $("#tab1").fadeIn();
+        $("#tab3").hide();
+        $("#tab2").hide();
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+    function OpenTab2(strMsg, error) {
+        $("#tab1").hide();
+        $("#tab3").hide();
+        $("#tab2").fadeIn();
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+    function OpenTab3(strMsg, error) {
+        $("#tab1").hide();
+        $("#tab3").fadeIn();
+        $("#tab2").hide();
+
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+    $(document).ready(function () {
+        setDatatable("gvpricing");
+        $('#loadingMask').fadeOut();
+    });
+</script>
+
+@if (TempData["JavaScriptFunction"] != null)
+{
+
+    <script type="text/javascript">
+                    @Html.Raw(TempData["JavaScriptFunction"]);
+    </script>
+}
+

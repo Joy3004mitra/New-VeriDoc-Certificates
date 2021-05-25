@@ -1,0 +1,311 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MvcGrid/_admin_layout.cshtml";
+}
+
+@section FormName{
+
+    <i class="icon-home2 mr-2"></i>Benefits Section
+
+}
+
+@section StyleCss{
+
+    <style type="text/css">
+        .filename {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .preview {
+            height: 230px;
+        }
+    </style>
+
+}
+<script>
+
+    function OpenTab1(strMsg, error) {
+        $("#tab1").fadeIn();
+        $("#tab3").hide();
+        $("#tab2").hide();
+
+        setDatatable("gvBenefits");
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+    function OpenTab2(strMsg, error) {
+
+        $("#tab1").hide();
+        $("#tab3").hide();
+        $("#tab2").fadeIn();
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function ShowSuccess() {
+        swal({
+            title: "Data Update",
+            text: "Data Updated Sucessfully!",
+            icon: "success",
+            button: "Ok",
+        });
+    }
+
+    function ShowErrMsg() {
+        swal({
+            title: "Error",
+            text: "Error Occured!",
+            icon: "error",
+            button: "Ok",
+        });
+    }
+</script>
+
+<div class="content" style="min-height: 10px;">
+    <ul id="fbAdd" class="fab-menu fab-menu-fixed fab-menu-bottom-right">
+        <li>
+            @using (Html.BeginForm("Add", "Benefit", FormMethod.Post, new { id = "submitaddform" }))
+            {
+
+
+                <a id="A2" href="#" class="fab-menu-btn btn bg-green btn-float rounded-round btn-icon" onclick="btn_Add_Click();">
+                    <i class="fab-icon-open icon-plus3"></i><i class="fab-icon-close icon-cross2"></i>
+                </a>
+            }
+        </li>
+    </ul>
+    <div id="tab1" class="card">
+        <div class="card-body">
+            <table cellspacing="0" rules="all" class="table table-hover table-bordered table-striped" border="1" id="gvBenefits" name="gvBenefits" style="border-collapse:collapse;">
+                <tbody>
+                    <tr>
+                        <th>HEADING</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+
+
+                    @foreach (System.Data.DataRow dr in Model)
+                    {
+                        <tr>
+
+                            <td>@dr["BENEFITS_HEADING"].ToString()</td>
+
+                            <td>
+                                @using (Html.BeginForm("edit", "Benefit", FormMethod.Post, new { id = "submitE+" + dr["MAST_BENEFITS_KEY"].ToString() + "" }))
+                                {
+
+                                    <input type="hidden" name="editid" value="@dr["MAST_BENEFITS_KEY"].ToString()" />
+
+                                    <a id="submitE+@dr["MAST_BENEFITS_KEY"].ToString()" href="#" onclick="postmethodusingjs(this.id)" class="list-icons-item"><i class="icon-menu9"></i></a>
+
+                                }
+                            </td>
+
+                            <td>
+                                @using (Html.BeginForm("delete", "Benefit", FormMethod.Post, new { id = "submitD+" + dr["MAST_BENEFITS_KEY"].ToString() + "" }))
+                                {
+
+                                    <input type="hidden" name="editid" value="@dr["MAST_BENEFITS_KEY"].ToString()" />
+
+                                    <a id="submitD+@dr["MAST_BENEFITS_KEY"].ToString()" href="#" onclick="postmethodusingjs(this.id)" class="list-icons-item"><i class="icon-trash"></i></a>
+
+                                }
+                            </td>
+
+                        </tr>
+
+                    }
+
+
+
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+    <ul id="tabsmenu" class="tabsmenu" style="display: none">
+        <li class="active"><a id="atab1" href="#tab1">List</a></li>
+        <li><a id="atab2" href="#tab2">Add / Edit</a></li>
+        <li><a id="aPageName" href="#" style="margin: 0 5px 0 33%; border-radius: 6px;">&nbsp;</a></li>
+    </ul>
+    <div id="tab2" class="card" style="display: none">
+        @using (Html.BeginForm("btn_Head_Save_Click", "Benefit", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+
+            <div>
+
+                <input type="hidden" id="hf_BENEFITS_IMG" name="hf_BENEFITS_IMG" value="@ViewBag.hf_BENEFITS_IMG" />
+
+                <input type="hidden" id="hf_MAST_BENEFITS_KEY" name="hf_MAST_BENEFITS_KEY" value="@ViewBag.hf_MAST_BENEFITS_KEY" />
+
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <fieldset>
+                            <legend class="font-weight-semibold">Benefits</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>
+                                                Heading
+                                            </label>
+                                            <input type="text" id="txt_HEADING" name="txt_HEADING" value="@ViewBag.txt_HEADING" class="form-control" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <legend>Image</legend>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>
+                                                        Upload Picture (Accepted Format .png, .jpg, .jpeg only. Max size 2 MB)
+                                                    </label>
+
+                                                    <input type="file" id="fu_benefit" name="fu_benefit" class="form-input-styled" data-fouc accept=".gif, .png, .jpg, .jpeg" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8 ml-auto mr-auto">
+                                                <img id="img_benefit" srcset="@ViewBag.img_benefit" class="form-control preview" src="~/Content/images/no_image.jpg" runat="server" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>
+                                            Description
+                                        </label>
+
+                                        <textarea id="txt_DESCRIPTION" name="txt_DESCRIPTION" class="summernote" rows="2">@ViewBag.txt_DESCRIPTION</textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+
+                            <input type="submit" value="Submit" id="btn_Head_Save" name="btn_Head_Save" class="mb-xs mt-xs btn btn-success" />
+                            <input type="button" value="Back" id="btn_Back_Save" name="btn_Back_Save" class="mb-xs mt-xs mr-xs btn btn-warning" onclick="location.href = 'Index';" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@if (ViewBag.JavaScriptFunction != null)
+{
+
+    <script type="text/javascript">
+                    @Html.Raw(ViewBag.JavaScriptFunction);
+    </script>
+}
+<script>
+
+
+    function postmethodusingjs(id) {
+        document.forms[id].submit();
+        return false;
+    }
+    function btn_Add_Click() {
+
+        //    alert('ok');
+        document.forms["submitaddform"].submit();
+        return false;
+    }
+
+</script>
+<script type="text/javascript">
+
+
+    function OpenTab3(strMsg, error) {
+        $("#tab1").hide();
+        $("#tab3").fadeIn();
+        $("#tab2").hide();
+
+        if ($.trim(strMsg) != '') {
+            if (error == 1)
+                openErrorPopup(strMsg);
+            else
+                openSuccessPopup(strMsg);
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('.form-input-styled').uniform({
+            fileButtonClass: 'action btn bg-pink-400'
+        });
+
+        $("#txt_DESCRIPTION").summernote({
+            height: 180,
+            codemirror: { "theme": "ambiance" }
+        });
+
+        $("#txt_DESCRIPTION").on('summernote.blur', function () {
+            $("#txt_DESCRIPTION").html($("#txt_DESCRIPTION").summernote('code'));
+        });
+
+        $("#fu_benefit").on("change", function (evt) {
+            var tgt = evt.target || window.event.srcElement, files = tgt.files;
+            if (files.length > 0) {
+                if (files[0].size > 20097134) {
+                    $(this).val("");
+                    $(this).next(".filename").text("No file selected");
+                    $('#img_benefit').attr("src", "../Content/images/no_image.jpg");
+                    $(this).focus();
+                    openErrorPopup("Please maintain allowed document size (20MB maximum).");
+                }
+                else {
+                    readURL(this, $('#img_benefit'));
+                }
+            }
+            else {
+                $('#img_benefit').attr("src", "../Content/images/no_image.jpg");
+            }
+        });
+
+        $('#loadingMask').fadeOut();
+    });
+</script>
+
+@if (TempData["JavaScriptFunction"] != null)
+{
+
+    <script type="text/javascript">
+                    @Html.Raw(TempData["JavaScriptFunction"]);
+    </script>
+}
+
